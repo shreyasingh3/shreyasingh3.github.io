@@ -8,7 +8,7 @@ Personal website: plain HTML/CSS/JS, served by GitHub Pages with no build step.
 
 ## Adding a recipe
 
-Edit `js/recipes.js` and copy an existing entry. Fields: `title`, `description`, `time`,
+Edit `js/recipes.js` and copy an existing entry. Fields: `title`, `description`, `time`, `makes`, `source`, `notes`,
 `servings`, `tags`, `ingredients`, `steps`. The search box matches title, description,
 ingredients, and tags.
 

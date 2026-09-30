@@ -25,12 +25,24 @@ let activeTag = null;
 const escapeHtml = s => String(s).replace(/[&<>"']/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+const meta = r =>
+  [r.time, r.servings ? `serves ${r.servings}` : r.makes].filter(Boolean).map(escapeHtml).join(' · ');
+
+const sourceHtml = r => {
+  if (!r.source) return '';
+  const name = escapeHtml(r.source.name);
+  return `<p class="muted">Source: ${r.source.url ? `<a href="${escapeHtml(r.source.url)}">${name}</a>` : name}</p>`;
+};
+
+// Lowercase and strip accents so "jalapeno" matches "jalapeño".
+const normalize = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
 const searchText = r =>
-  [r.title, r.description, ...(r.ingredients || []), ...(r.tags || [])].join(' ').toLowerCase();
+  normalize([r.title, r.description, ...(r.ingredients || []), ...(r.tags || []), ...(r.notes || [])].join(' '));
 
 function matches(recipe, query) {
   const text = searchText(recipe);
-  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  const words = normalize(query).split(/\s+/).filter(Boolean);
   const tagOk = !activeTag || (recipe.tags || []).includes(activeTag);
   return tagOk && words.every(w => text.includes(w));
 }
@@ -53,7 +65,7 @@ function renderList() {
         <article class="card recipe-card" data-index="${i}" tabindex="0">
           <h3>${escapeHtml(r.title)}</h3>
           <p>${escapeHtml(r.description || '')}</p>
-          <p class="muted">${[r.time, r.servings && `serves ${r.servings}`].filter(Boolean).map(escapeHtml).join(' · ')}</p>
+          <p class="muted">${meta(r)}</p>
           <div>${(r.tags || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
         </article>`).join('')
     : '<p class="muted">No recipes match your search.</p>';
@@ -64,11 +76,15 @@ function openRecipe(i) {
   detail.innerHTML = `
     <h2>${escapeHtml(r.title)}</h2>
     <p>${escapeHtml(r.description || '')}</p>
-    <p class="muted">${[r.time, r.servings && `serves ${r.servings}`].filter(Boolean).map(escapeHtml).join(' · ')}</p>
+    <p class="muted">${meta(r)}</p>
+    ${sourceHtml(r)}
     <h3>Ingredients</h3>
-    <ul>${(r.ingredients || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
+    <ul>${(r.ingredients || []).map(x => x.endsWith(':')
+      ? `<li class="subheading">${escapeHtml(x.slice(0, -1))}</li>`
+      : `<li>${escapeHtml(x)}</li>`).join('')}</ul>
     <h3>Steps</h3>
-    <ol>${(r.steps || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ol>`;
+    <ol>${(r.steps || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ol>
+    ${r.notes && r.notes.length ? `<h3>Notes</h3><ul>${r.notes.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>` : ''}`;
   dialog.showModal();
 }
 

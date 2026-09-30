@@ -167,3 +167,10 @@ dialog .close {
   cursor: pointer;
   color: var(--muted);
 }
+
+dialog li.subheading {
+  list-style: none;
+  margin: 0.75rem 0 0.25rem -1.25rem;
+  font-weight: 600;
+}
+dialog li.subheading:first-child { margin-top: 0; }
