@@ -65,7 +65,7 @@ const RECIPES = [
     description: "Fudgy, naturally sweetened brownies made with roasted sweet potato, maple syrup, and oat flour.",
     time: "About 45 min, plus roasting",
     makes: "One 8×8-inch pan",
-    source: { name: "Instagram (@wellwith…)" },
+    source: { name: "Instagram" }, // creator handle was cut off in the screenshot: "@wellwith…"
     tags: ["baking", "dessert", "chocolate", "gluten-free", "sweet potato", "healthy"],
     ingredients: [
       "1 cup mashed sweet potato (roasted)",
