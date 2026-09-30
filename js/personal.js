@@ -34,12 +34,15 @@ const sourceHtml = r => {
   return `<p class="muted">Source: ${r.source.url ? `<a href="${escapeHtml(r.source.url)}">${name}</a>` : name}</p>`;
 };
 
+// Lowercase and strip accents so "jalapeno" matches "jalapeño".
+const normalize = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
 const searchText = r =>
-  [r.title, r.description, ...(r.ingredients || []), ...(r.tags || []), ...(r.notes || [])].join(' ').toLowerCase();
+  normalize([r.title, r.description, ...(r.ingredients || []), ...(r.tags || []), ...(r.notes || [])].join(' '));
 
 function matches(recipe, query) {
   const text = searchText(recipe);
-  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  const words = normalize(query).split(/\s+/).filter(Boolean);
   const tagOk = !activeTag || (recipe.tags || []).includes(activeTag);
   return tagOk && words.every(w => text.includes(w));
 }

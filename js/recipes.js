@@ -180,5 +180,139 @@ const RECIPES = [
       "For the sauce, microwave the cream, butter, and brown sugar in a bowl for 40–60 seconds until hot and bubbling, then mix well.",
       "Top the pudding with ice cream, custard, or whipped cream and drizzle with the sauce."
     ]
+  },
+  {
+    title: "Chocolate Chip Cookies",
+    description: "Chewy brown sugar cookies with melted butter, an extra yolk, and both chopped chocolate and chips.",
+    time: "About 30 min, plus 2 hr chilling",
+    makes: "About 16 cookies",
+    source: { name: "A comment on a social media video" },
+    tags: ["baking", "dessert", "cookies", "chocolate"],
+    ingredients: [
+      "1 cup (2 sticks / 226 g) unsalted butter, melted and cooled",
+      "210 g packed light brown sugar (about 1 cup)",
+      "100 g granulated sugar (½ cup)",
+      "1 large egg, room temperature",
+      "1 egg yolk, room temperature",
+      "2 tsp pure vanilla extract",
+      "240 g unbleached all-purpose flour (about 2 cups)",
+      "1 tsp baking soda",
+      "½ tsp fine sea salt",
+      "4 oz semi-sweet chocolate bar, chopped",
+      "4 oz semi-sweet chocolate chips"
+    ],
+    steps: [
+      "In a large bowl, whisk the melted butter, brown sugar, and granulated sugar together well, about 2 minutes.",
+      "Add the egg, yolk, and vanilla and whisk until smooth.",
+      "In a separate bowl, sift the flour, then stir in the baking soda and salt.",
+      "Add the flour mixture to the butter mixture about ½ cup at a time, mixing with a spatula just until combined. Don't overmix.",
+      "Mix in the chopped chocolate and chocolate chips. Cover and refrigerate at least 2 hours.",
+      "Heat the oven to 350°F and line a baking sheet with parchment or a silicone mat.",
+      "Scoop the dough into balls of at least 3 tablespoons each and place them about 1 inch apart, about 4 per sheet.",
+      "Bake 11–13 minutes, until golden brown. The edges may be slightly darker than the middle; that's fine."
+    ],
+    notes: [
+      "An ice cream scoop makes evenly sized cookies.",
+      "Baking only about 4 at a time gives them room to spread."
+    ]
+  },
+  {
+    title: "Avocado Jalapeño Crema",
+    description: "A creamy, tangy, herby sauce for tacos, bowls, salads, or dipping.",
+    time: "5 min",
+    makes: "About 1½ cups",
+    tags: ["sauce", "dip", "mexican", "vegetarian", "no-cook", "quick", "spicy", "avocado"],
+    ingredients: [
+      "½ cup buttermilk",
+      "½ cup mayo",
+      "½ tsp onion powder",
+      "½ tsp garlic powder",
+      "1½ tsp dried dill",
+      "Cilantro, to taste",
+      "1 jalapeño (or to taste)",
+      "1 medium avocado",
+      "Salt, to taste",
+      "Lemon juice, to taste"
+    ],
+    steps: [
+      "Add everything to a blender and blend until smooth.",
+      "Taste and adjust the salt, lemon juice, and jalapeño."
+    ],
+    notes: [
+      "Remove the jalapeño seeds and ribs for a milder crema.",
+      "Keeps in the fridge for a few days in an airtight container; the lemon juice helps it stay green."
+    ]
+  },
+  {
+    title: "Chocolate Banana Bread",
+    description: "Double chocolate banana bread with cocoa, chocolate chips, and toasted nuts.",
+    time: "About 1 hr 20 min, plus cooling",
+    makes: "1 loaf",
+    source: { name: "proofdc.com", url: "https://proofdc.com" },
+    tags: ["baking", "breakfast", "dessert", "bananas", "chocolate"],
+    ingredients: [
+      "3 ripe bananas, mashed (about 1¼ cups)",
+      "½ cup (100 g) brown sugar",
+      "¼ cup (50 g) granulated sugar",
+      "½ cup (120 ml) vegetable oil (or melted butter or coconut oil)",
+      "2 large eggs (or flax eggs for vegan)",
+      "1 tsp vanilla extract",
+      "1½ cups (190 g) all-purpose flour",
+      "½ cup (50 g) unsweetened cocoa powder",
+      "1 tsp baking soda",
+      "½ tsp baking powder",
+      "½ tsp salt",
+      "¾ cup (130 g) chocolate chips (dark, milk, or semi-sweet)",
+      "½ cup chopped walnuts or pecans"
+    ],
+    steps: [
+      "Heat the oven to 350°F with a rack in the center. Grease a 9×5-inch loaf pan and line it with parchment.",
+      "In a large bowl, whisk the flour, cocoa powder, baking soda, baking powder, and salt until no lumps remain.",
+      "In another bowl, mix the mashed bananas, eggs, both sugars, oil, and vanilla until smooth.",
+      "Gently fold the wet ingredients into the dry, then fold in the chocolate chips and nuts. Don't overmix.",
+      "Pour the batter into the pan and level the top with a spatula.",
+      "Bake 60–65 minutes, rotating the pan halfway, until a toothpick comes out with just a few moist crumbs.",
+      "Cool in the pan for 15 minutes, then lift out by the parchment onto a wire rack. Cool completely before slicing."
+    ],
+    notes: [
+      "For a vegan loaf, use flax eggs and oil or coconut oil."
+    ]
+  },
+  {
+    title: "Vegan Chocolate Banana Bread",
+    description: "Rich, egg-free, dairy-free chocolate banana bread with melted dark chocolate and a chocolate chip top.",
+    time: "About 55 min, plus 2 hr cooling",
+    servings: 8,
+    source: { name: "Full of Plants", url: "https://fullofplants.com" },
+    tags: ["baking", "breakfast", "dessert", "bananas", "chocolate", "vegan", "dairy-free"],
+    ingredients: [
+      "1 cup (142 g) all-purpose flour",
+      "½ cup (100 g) sugar",
+      "⅓ cup (34 g) unsweetened cocoa powder",
+      "1¼ tsp baking soda",
+      "¼ tsp baking powder",
+      "⅛ tsp salt",
+      "3 large (330 g) ripe bananas",
+      "½ cup (120 ml) neutral oil",
+      "2 oz (57 g) dark chocolate",
+      "2 tsp (10 ml) vanilla extract",
+      "⅓ cup (53 g) dark chocolate chips, for topping"
+    ],
+    steps: [
+      "Heat the oven to 350°F and line an 8×4-inch loaf pan with parchment.",
+      "In a large bowl, whisk the flour, sugar, cocoa powder, baking soda, baking powder, and salt.",
+      "Melt the dark chocolate over a double boiler (or in the microwave in short bursts).",
+      "Mash the bananas with a fork or blender.",
+      "Pour the bananas, oil, melted chocolate, and vanilla over the dry ingredients and mix just until combined.",
+      "Spread the batter evenly in the pan and top with the chocolate chips.",
+      "Bake about 45 minutes, until a toothpick comes out with a few crumbs.",
+      "Cool completely, at least 2 hours, before slicing; it's delicate while warm."
+    ],
+    notes: [
+      "Use ripe, spotty bananas.",
+      "Check that your chocolate is dairy-free to keep it vegan.",
+      "About 353 kcal per slice.",
+      "Keeps 5 days at room temperature, or freeze for up to 2 months."
+    ]
   }
 ];
