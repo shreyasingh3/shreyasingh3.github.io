@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal · Shreya Singh</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Shreya Singh</a>
+    <nav>
+      <a href="career.html">Career</a>
+      <a href="personal.html" class="active">Personal</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Personal</h1>
+
+    <!-- To add a tab: add a <button> here and a matching <section class="tab-panel" id="..."> below. -->
+    <div class="tabs" role="tablist">
+      <button role="tab" data-tab="recipes">Recipes</button>
+      <button role="tab" data-tab="about">About Me</button>
+    </div>
+
+    <section class="tab-panel" id="recipes" role="tabpanel">
+      <input id="recipe-search" type="search" placeholder="Search recipes, ingredients, or tags…" autocomplete="off">
+      <div id="tag-filters" class="tag-filters"></div>
+      <p id="recipe-count" class="muted"></p>
+      <div id="recipe-list" class="card-grid"></div>
+    </section>
+
+    <section class="tab-panel" id="about" role="tabpanel">
+      <p>A little about me outside of work. Hobbies, favorite things, whatever you like.</p>
+    </section>
+  </main>
+
+  <dialog id="recipe-dialog">
+    <button class="close" aria-label="Close">×</button>
+    <div id="recipe-detail"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <a href="https://github.com/shreyasingh3">GitHub</a>
+  </footer>
+
+  <script src="js/recipes.js"></script>
+  <script src="js/personal.js"></script>
+</body>
+</html>
