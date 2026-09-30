@@ -35,7 +35,7 @@ const sourceHtml = r => {
 };
 
 const searchText = r =>
-  [r.title, r.description, ...(r.ingredients || []), ...(r.tags || [])].join(' ').toLowerCase();
+  [r.title, r.description, ...(r.ingredients || []), ...(r.tags || []), ...(r.notes || [])].join(' ').toLowerCase();
 
 function matches(recipe, query) {
   const text = searchText(recipe);
@@ -76,9 +76,12 @@ function openRecipe(i) {
     <p class="muted">${meta(r)}</p>
     ${sourceHtml(r)}
     <h3>Ingredients</h3>
-    <ul>${(r.ingredients || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
+    <ul>${(r.ingredients || []).map(x => x.endsWith(':')
+      ? `<li class="subheading">${escapeHtml(x.slice(0, -1))}</li>`
+      : `<li>${escapeHtml(x)}</li>`).join('')}</ul>
     <h3>Steps</h3>
-    <ol>${(r.steps || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ol>`;
+    <ol>${(r.steps || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ol>
+    ${r.notes && r.notes.length ? `<h3>Notes</h3><ul>${r.notes.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>` : ''}`;
   dialog.showModal();
 }
 
