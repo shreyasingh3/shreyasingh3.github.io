@@ -314,5 +314,59 @@ const RECIPES = [
       "About 353 kcal per slice.",
       "Keeps 5 days at room temperature, or freeze for up to 2 months."
     ]
+  },
+  {
+    title: "Easy No-Knead Cinnamon Rolls",
+    description: "Soft, overnight cinnamon rolls with a brown sugar pecan filling and cream cheese glaze. No kneading or mixer needed.",
+    time: "About 12 hr (mostly overnight chilling)",
+    makes: "12 rolls",
+    source: { name: "Bigger Bolder Baking (Gemma Stafford)", url: "https://www.biggerbolderbaking.com/cinnamon-rolls/" },
+    tags: ["baking", "breakfast", "dessert", "brunch", "make-ahead", "yeast", "cinnamon", "pecans"],
+    ingredients: [
+      "Dough:",
+      "3½ cups (497 g) all-purpose flour",
+      "3 tsp instant yeast",
+      "2 tsp salt",
+      "¾ cup (180 ml) whole milk",
+      "⅓ cup (75 ml) water",
+      "¼ cup (71 g) honey",
+      "¼ cup (57 g) butter",
+      "2 large eggs, room temperature",
+      "Filling:",
+      "½ cup (115 g) butter, melted",
+      "1¼ cups (213 g) dark brown sugar",
+      "2½ tbsp ground cinnamon",
+      "1 cup (142 g) toasted pecans, chopped",
+      "Egg wash:",
+      "1 egg beaten with 1 tbsp milk",
+      "Cream cheese glaze:",
+      "½ cup (115 g) cream cheese, room temperature",
+      "¼ cup (57 g) butter, softened",
+      "1 cup (115 g) powdered sugar, sifted",
+      "½ tsp vanilla extract"
+    ],
+    steps: [
+      "Day 1: In a large bowl, whisk the flour, yeast, and salt, keeping the yeast and salt on opposite sides until you mix.",
+      "Warm the milk, water, honey, and butter in the microwave in 30-second bursts until the butter melts and the mixture is warm (not hot). Whisk in the eggs.",
+      "Stir the wet mixture into the dry until a soft, sticky dough forms.",
+      "Cover and let rise 2 hours at room temperature, then refrigerate at least 8 hours or overnight (up to 3 days).",
+      "Day 2: Stir the melted butter, brown sugar, and cinnamon together for the filling.",
+      "Butter a 9×13-inch pan and line it with parchment.",
+      "On a well-floured surface, roll the cold dough into a 22×12-inch rectangle. If it springs back, rest it 3 minutes and try again.",
+      "Spread the filling over the dough, leaving a ½-inch border along both long edges, and sprinkle with the pecans.",
+      "Starting from a long edge, roll the dough into a log. Keep it snug but not tight, or the centers pop up while baking.",
+      "Cut into 12 equal rolls with a serrated knife and place them cut side up in the pan.",
+      "Cover and let rise about 1 hour, until puffy and touching. Heat the oven to 375°F near the end of the rise.",
+      "Gently brush the tops with egg wash and bake 40–45 minutes, until deep golden brown.",
+      "While they bake, beat the cream cheese, butter, powdered sugar, and vanilla until smooth.",
+      "Cool the rolls in the pan for 15 minutes, then spread the glaze generously over the top."
+    ],
+    notes: [
+      "Make ahead: you can also refrigerate the cut rolls overnight in the pan, then do the final rise and bake in the morning.",
+      "The dough has risen enough when it has doubled and a finger dent springs back slowly.",
+      "Swaps: maple syrup for the honey (1:1); 4½ tsp active dry yeast instead of instant, dissolved in the warm liquid first; leave out or swap the pecans. Doesn't work with gluten-free flour.",
+      "If the filling leaks, roll the log a little firmer or chill the filling first.",
+      "Store leftovers airtight in the fridge for a couple of days. Reheat at 300°F for 7–8 minutes, or microwave a frosted roll for 10–15 seconds."
+    ]
   }
 ];
